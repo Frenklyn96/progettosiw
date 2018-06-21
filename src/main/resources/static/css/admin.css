@@ -1,0 +1,24 @@
+div#hormenu li
+{
+    width:100px;
+    float:left;
+    margin: 0;
+    padding: 0;
+    border-right: 1px solid black;
+    color:black;
+}
+
+div#hormenu a
+{
+    display: block;
+    padding: 5px;
+    color: #000;
+    text-decoration: none;
+}
+ 
+div#hormenu a:hover
+{
+    background-color: #000033;
+    color: #FFFFFF;
+    text-decoration: none;
+}

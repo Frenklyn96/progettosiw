@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+Design by TEMPLATED
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Retention 
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20140221
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tutti i corsi (admin)</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="http://fonts.googleapis.com/css?family=Karla:400,700"
+	rel="stylesheet" />
+<link href="/css/default.css" rel="stylesheet" type="text/css"
+	media="all" />
+<link href="/css/fonts.css" rel="stylesheet" type="text/css" media="all" />
+<!--[if IE 6]>
+<link href="default_ie6.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+<body>
+	<div id="wrapper">
+		<div id="header-wrapper">
+			<div id="header" class="container">
+				<div id="logo">
+					<p>
+						<h1>
+							<b><i>M.O.P.P. Academy</i></b>
+						</h1>
+					</p>
+				</div>
+				<div id="banner">
+					<a href="#" class="image"><img src="/images/pic01.jpg" alt="" /></a>
+				</div>
+			</div>
+		</div>
+		<div id="menu-wrapper">
+			<div id="menu" class="container">
+				<ul>
+					<li><a href="/admin">My page</a></li>
+					<li class="current_page_item"><a href="/#">Ricerca</a></li>
+					<li><a href="/aggiungi"> aggiungi</a></li>
+					<li>
+						<form th:action="@{/logout}" method="post">
+							<input type="submit" value="Log Out" />
+						</form>
+					</li>
+				</ul>
+			</div>
+			<!-- end #menu -->
+		</div>
+		<div id="page" class="container">
+			<div class="title">
+				<h2>
+					<I><B><center>Elenco attività disponibili</center></B></I>
+				</h2>
+				</center>
+				<p>
+					<em></em>
+				</p>
+
+				<p></p>
+				<div class="cleaner_h20"></div>
+				<p>
+					<em></em>
+				</p>
+
+				<p></p>
+				<div class="cleaner_h20"></div>
+				<h3>
+					<center>
+					<table border="1">
+						<tr>
+							<td>Nome</td>
+							<td>Data</td>
+							<td>Ora</td>
+							<td>Centro</td>
+							<td>Città</td>
+						</tr>
+						<tr th:each="x:${attivita}">
+							<td th:text="${x.nome}"></td>
+							<td th:text="${x.data}"></td>
+							<td th:text="${x.ora}"></td>
+							<td th:text="${x.centro.nome}"></td>
+							<td th:text="${x.centro.citta}"></td>
+						</tr>
+					</table>
+					</center>
+				</h3>
+			</div>
+			<div id="sidebar"></div>
+		</div>
+</body>
+</html>
